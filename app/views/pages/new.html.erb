@@ -1,0 +1,19 @@
+<h1>Enter a New Page
+</h1>
+
+<div class="form">
+
+ <%= error_messages_for :page  -%>
+
+
+ <% form_for :page,  :url => { :action => "create" } do |form|  %>
+
+<%= render :partial => 'form' , :object => form    %>
+
+  <%= submit_tag "Submit", :class => "submit" %> &nbsp;
+
+  <% end %>
+
+
+</div>
+

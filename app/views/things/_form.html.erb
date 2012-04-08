@@ -1,0 +1,56 @@
+
+
+<div>
+
+<fieldset>
+
+<legend>Required fields</legend>
+
+
+
+
+  <%= form.label :title, "What I call it"  %> <br />
+  <%= form.text_field :title, :size => 80, :class => "text"  %> <br />
+
+  <%= form.label :description, "What I like about it"  %> <br />
+  <%= form.text_area :description, :rows => 8, :class => "text" %> <br />
+	
+  <%= form.label :remind_random, "Remind me about this thing from time to time"  %>
+	<%= form.check_box :remind_random %> <br />
+</fieldset>
+	
+<fieldset>
+
+<legend>Optional fields</legend>
+
+
+  <%= form.label :price  %> <br />
+  <%= form.text_field :price %> <br />
+		
+  <%= form.label :brand  %> <br />
+  <%= form.text_field :brand, :size => 80, :class => "text" %> <br />
+
+  <%= form.label :model  %> <br />
+  <%= form.text_field :model, :size => 80, :class => "text"   %> <br />
+
+  <%= form.label :acquired  %> <br />
+
+<%= form.date_select :acquired, :start_year => 1990, :end_year => Time.now.year, :include_blank => true %> <br />
+
+
+
+  <%= form.label :remind_on  %> <br />
+<%= form.date_select :remind_on, :start_year => Time.now.year, :end_year => Time.now.year + 5, :include_blank => true %> <br />
+
+
+
+		
+Category<br />
+  <%= form.text_field :category, :size => 80, :class => "text"%> 
+
+</fieldset>
+	
+	
+</div>
+
+

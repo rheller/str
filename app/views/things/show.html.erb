@@ -1,0 +1,34 @@
+<h1> 
+<%= h @thing.title %>
+</h1>
+
+<%= flash_notice  %>
+
+<% if user_owns_thing?(@thing) -%>
+<%= link_to image_tag("edit.png", :alt => "Edit", :title => "Edit this thing" ), :action => "edit", :id => @thing.id          %>
+<% end %>
+
+<div class="details">
+<dl>
+ <dt>What I call it:</dt>                          <dd><%=h @thing.title %> &nbsp;                                   </dd>
+ <dt>Why I like it:</dt>                           <dd><%=         simple_format @thing.description %>              </dd>
+ <dt>Remind me about this from time to time:</dt>  <dd><%=h @thing.remind_random %>         </dd>
+
+ <dt>Brand:</dt>  <dd><%=h @thing.brand %> &nbsp;   </dd>
+ <dt>Model:</dt>  <dd><%=h @thing.model %> &nbsp;   </dd>
+ <dt>Price:</dt>  <dd><%=h @thing.price %> &nbsp;   </dd>
+ <dt>Date Acquired:</dt>  <dd><%=h @thing.acquired %> &nbsp;   </dd>
+ <dt>Send specific reminder on:</dt>  <dd><%=h @thing.remind_on %> &nbsp;   </dd>
+
+ <dt>Category:</dt><dd>
+ <%= link_to @thing.category, {:action => 'category', :category => @thing.category}  %>
+ &nbsp;</dd>
+
+
+</dl>
+</div> <!-- end details division -->
+
+<% if ok_to_delete?(@thing)  %>
+<%= link_to image_tag("delete.png", :alt => "Delete", :title => "Delete this thing" ), {:action => "destroy", :id => @thing.id }, :confirm => 'Are you sure?', :method => :delete         %>
+<% end %>
+

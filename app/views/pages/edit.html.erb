@@ -1,0 +1,36 @@
+<h1>Edit a Page
+</h1>
+
+
+
+<div class="form">
+
+ <%= error_messages_for :page  -%>
+
+<fieldset>
+
+
+<legend>Edit Page Details </legend>
+
+
+
+ <% form_for :page, 
+ 
+ 
+   :url => { :action => "update", :id => @page.id } do |form|  %>
+
+
+<%= render :partial => 'form' , :object => form    %>
+
+
+  <%= submit_tag "Update", :class => "submit" %> &nbsp;
+  <%= link_to "cancel", { :action => "show", :id => @page.id }, :class => "cancel"  %> 
+
+
+
+  <% end %>
+
+</fieldset>
+
+</div>
+

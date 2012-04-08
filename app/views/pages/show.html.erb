@@ -1,0 +1,75 @@
+<%= flash_notice  %>
+
+
+<div id="next_prev">
+  <% if @page.prev_slug.present? %> 
+    <div class="page_previous">
+		<%= link_to 'Previous Page', :controller => :pages, :action => :show, :id => @page.prev_slug %>
+		</div>
+	<% end %>
+	
+		
+  <% if @page.next_slug.present? %> 
+    <div class="page_next">
+    <%= link_to 'Next Page', :controller => :pages, :action => :show, :id => @page.next_slug %>
+		</div>
+	<% end %>
+	
+    <div id="page_headline">
+		<%= @page.title %>
+    </div>
+
+	
+</div>
+
+<div id="page_structure">
+<div id="page_left">
+<%= @page.part1 %>
+
+
+
+<% if @page.next_slug.present? %> 
+    <div class="page_next">
+    <%= link_to 'Next', :controller => :pages, :action => :show, :id => @page.next_slug %>
+		</div>
+	<% end %>
+
+</div> 
+
+
+
+<% if @page.embedded.length > 0 %>
+<div id="page_video_headline">
+</div>
+<div id="page_vid">
+  <%= @page.extra %>
+	<br />
+  <%= @page.embedded %>
+</div>
+<% end %>
+
+
+
+</div> <!-- page_structure -->
+
+
+<div id="page_central">
+<%= @page.part2 %>
+
+	
+	
+	
+
+	
+
+<%= render :partial => "links"  %>
+
+<% if  logged_in? && current_user.admin -%>
+  <%= link_to :Permalink, @page.slug.name %>
+  <%= link_to :Edit, :action => "edit", :id => @page.id %>
+  <%= link_to :Delete, :action => "destroy", :id => @page.id %>
+  <%= link_to :Logout, logout_path %>
+<% end %>
+
+</div> <!-- page_central -->
+

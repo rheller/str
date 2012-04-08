@@ -1,0 +1,23 @@
+<h1>Edit</h1>
+
+<%= error_messages_for :user %>
+
+<% form_for @user do |f| -%>
+
+<p>Login: 
+<%= @user.login %>
+</p>
+
+<p><%= label_tag 'email' %>: 
+<%= f.text_field :email %></p>
+
+<p><%= label_tag 'reminder_interval', "Send me reminders every" %>: 
+<%= f.select :reminder_interval, (1..7).to_a + [14, 30,60,90] %> days</p>
+
+
+<p>  <%= label_tag :suspend_email, "Don't send me any reminders"  %> 
+<%= f.check_box :suspend_email %></p>
+
+
+<p><%= submit_tag 'Submit' %></p>
+<% end -%>

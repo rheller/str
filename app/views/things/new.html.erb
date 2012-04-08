@@ -1,0 +1,21 @@
+<h1>Enter a New Thing
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to image_tag("explain.png", :alt => "Explain", :title => "Explain how to use this form" ), :controller=> :explanations, :action => "index" %><br />
+</h1>
+
+<div class="form">
+
+ <%= error_messages_for :thing  -%>
+
+
+ <% form_for :thing,  :url => { :action => "create" } do |form|  %>
+
+<%= render :partial => 'form' , :object => form    %>
+
+  <%= submit_tag "Submit", :class => "submit" %> &nbsp;
+
+  <% end %>
+
+
+</div>
+

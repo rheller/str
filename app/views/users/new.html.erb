@@ -1,0 +1,36 @@
+<h1>Sign up as a new user</h1>
+<% @user.password = @user.password_confirmation = nil %>
+
+<%= error_messages_for :user %>
+
+<p>
+Remindful seeks to protect your private information from unauthorized use. But since even big corporate Web sites
+get hacked, and we're a little non-profit, your best security is to pick a username that <em>not</em> your real name, and don't pick an
+ <a target="_blank" href="http://www.thetechnewsblog.com/2010/01/30/20-popular-and-easy-to-guess-passwords/">easy to guess password</a>.
+</p>
+
+<% form_for :user, :url => users_path do |f| -%>
+<p><%= label_tag 'login' %><br/>
+<%= f.text_field :login %></p>
+
+<p><%= label_tag 'email' %><br/>
+<%= f.text_field :email %></p>
+
+<p><%= label_tag 'password' %><br/>
+<%= f.password_field :password %></p>
+
+<p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
+<%= f.password_field :password_confirmation %></p>
+
+<p><%= label_tag 'reminder_interval', "Send me reminders every" %>: 
+<%= f.select :reminder_interval, (1..7).to_a + [14, 30,60,90] %> days</p>
+
+<p>  <%= label_tag :suspend_email, "Don't send me any reminders"  %> 
+		
+<%= f.check_box :suspend_email %> <br />
+</p>
+
+
+
+<p><%= submit_tag 'Sign up' %></p>
+<% end -%>

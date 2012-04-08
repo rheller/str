@@ -1,0 +1,41 @@
+<%= flash_notice  %>
+
+<% if logged_in? -%>
+<h1>My Account</h1>
+
+<p class="modify">
+<%= link_to "edit", :action => "edit", :id => @user.id          %>
+</p>
+
+
+<% @user.password = @user.password_confirmation = nil %>
+
+<%= error_messages_for :user %>
+
+<p>Login: 
+<%= @user.login %>
+</p>
+
+
+	 <%if @user.admin? %>
+	 <%= image_tag("star.gif", :alt => "Admin", :size => "16x16") %>Admin
+	 <% end %>
+
+	 
+<p>E-mail: 
+<%= @user.email %>
+</p>
+
+
+
+
+<p>  
+Send me reminders every <%= @user.reminder_interval %> days <br />
+Suspend all emails? <%= @user.suspend_email %>
+</p>
+		
+
+<p>
+<%= link_to "Forgot/Change Password", forgot_path %>
+</p>
+<% end %>

@@ -1,0 +1,38 @@
+<h1>Edit a Thing
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to image_tag("explain.png", :alt => "Explain", :title => "Explain how to use this form" ), :controller=> :explanations, :action => "index" %><br />
+</h1>
+
+
+
+<div class="form">
+
+ <%= error_messages_for :thing  -%>
+
+<fieldset>
+
+
+<legend>Edit Thing Details </legend>
+
+
+
+ <% form_for :thing, 
+ 
+ 
+   :url => { :action => "update", :id => @thing.id } do |form|  %>
+
+
+<%= render :partial => 'form' , :object => form    %>
+
+
+  <%= submit_tag "Update", :class => "submit" %> &nbsp;
+  <%= link_to "cancel", { :action => "show", :id => @thing.id }, :class => "cancel"  %> 
+
+
+
+  <% end %>
+
+</fieldset>
+
+</div>
+

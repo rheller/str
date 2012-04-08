@@ -1,0 +1,10 @@
+<h1>My Community</h1>
+<% for user in @users %>
+<%  if user.public_account %>
+<p>
+    <%= link_to h(users_name(user)), :controller => "articles", :action => "index", :id => user.id  %><br />
+</p>
+ <% end %>
+       
+<% end %>
+

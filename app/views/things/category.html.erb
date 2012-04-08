@@ -1,0 +1,38 @@
+
+<%= flash_notice  %>
+
+
+
+<div class="things_list">
+ <h2>My <%= @category.to_s  %> </h2>
+
+
+<ul>
+   <% for thing in @things %>
+ 
+	 <li> 
+	<div class="single_thing_listed">
+
+  <%= link_to h(thing.title),
+           thing_path(:id         => thing.id)
+            %>
+
+<div class="thing_excerpt">
+ <%= thing.description  %>
+</div>
+</div>
+  </li>
+  <% end %>
+</ul>
+
+ <%= no_things(@things)            %>
+
+
+<%= link_to image_tag("add.png", :alt => "Add", :title => "Enter a New Thing" ), new_thing_path %>
+
+	
+
+
+
+</div>
+

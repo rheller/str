@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>Seeing The Roses        
+<%= " #{@title} " if @title %>
+</title>
+
+
+<meta name="generator" content="Ruby on Rails" />
+
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag 'google_analytics' %> 
+
+
+
+<%= stylesheet_link_tag "screen", :media => "screen" %>
+
+
+</head>
+
+<body class="<%= controller.controller_name %>">
+
+<div id="wrapper">
+
+  <div id="logo">
+
+<span>Seeing </span>
+
+	<!-- wraps link to home page around the image -->
+	<%= link_to_unless_current image_tag("logo.gif", :alt => "Rose logo", :title => "Return to Home Page" ), :controller => "welcome" %>
+
+<span>the Roses</span>
+
+
+  </div>
+<div class="slogan">
+<p>
+A mindful way to address the climate crisis
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="SeeingtheRoses">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<a href="http://www.twitter.com/SeeingtheRoses" class="follow-button"><img src="http://twitter-badges.s3.amazonaws.com/t_mini-a.png" alt="Follow SeeingtheRoses on Twitter"/></a>
+</p>
+</div>
+
+
+<div id="content">
+  <%= yield :layout %>
+</div>
+
+
+
+
+<div id="footer">
+ 
+ <p>
+ <%= link_to "About Seeing The Roses", :controller => "explanations", :action => "index" %>
+	</p>
+</div>
+
+
+
+</div>
+
+</body>
+</html>

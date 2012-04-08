@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html> 
+<head> 
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /> 
+</head> 
+<body> 
+
+<h1>Seeing the Roses reminder for <%=h @user.login %></h1> 
+
+
+<% if (@planned_things.length > 0) %> </p> 
+  <p>You asked to be reminded of these things today:</p>  
+  <% for planned in @planned_things %>
+    <p><%=h planned.description %> </p> 
+  <% end %>
+<% end %>
+
+
+<% if @random_thing then %>
+<p>
+Here is one of your things, selected at random, for you to remember to mindfuly enjoy: 
+</p>
+<br/>
+<p>
+<%= h(@random_thing.description)   %>  
+</p>
+<% end %>
+
+
+<p>
+You are receiving this email because you requested this reminder from Remindful. 
+If you would like to stop receving this emails, go to <%= link_to "SeeingTheRoses.org", :controller => :user, :action => :edit %>,  log in using your username, <%= @user.login %>, and edit your user settings.
+If you have forgotten your password, you can request a new password.
+
+</p>
+
+
+</body> 
+</html> 
