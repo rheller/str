@@ -469,7 +469,7 @@ th {
 #page_central {
 	Clear: both;
         width: 870px;
-        height: 270px;
+        height: 220px;
 }
 #page_central a {
   	text-decoration: none;
@@ -494,7 +494,7 @@ th {
         padding: 10px;
   	border: 1px solid;
         float:left;
-        height: 210px;
+        height: 150px;
         width: 260px;
   background-color: #F8F5EE;
 }
@@ -502,7 +502,7 @@ th {
         padding: 10px;
   	border: 1px solid;
         float:left;
-        height: 210px;
+        height: 150px;
         width: 260px;
   background-color: #F8F5EE;
 }
@@ -510,7 +510,7 @@ th {
         padding: 10px;
   	border: 1px solid;
         float:left;
-        height: 210px;
+        height: 150px;
         width: 260px;
   background-color: #F8F5EE;
 }
