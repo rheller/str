@@ -14,6 +14,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resource :session
 
+
+
+
+
+
 #thing_path
  map.thing '/things/show/:id', :controller => "things",
                                                     :action     => "show"
@@ -40,6 +45,9 @@ map.report_thing '/things/report',   :controller => "things",
                                                     :action     => "report"
 
 
+map.connect '/green',              :controller => 'pages',
+             :action     => 'show',
+             :id       => 'love-mindfulness-and-the-environment'
 
 
 

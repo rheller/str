@@ -57,12 +57,12 @@
 <%= @page.part2 %>
 
 	
-	
-	
-
-	
-
-<%= render :partial => "links"  %>
+		
+<% if @page.prev_page.present?  %>
+  <%= render :partial => "links_track2"  %>
+<% else %>
+  <%= render :partial => "links"  %>
+<% end %>
 
 <% if  logged_in? && current_user.admin -%>
   <%= link_to :Permalink, @page.slug.name %>

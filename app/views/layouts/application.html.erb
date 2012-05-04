@@ -6,7 +6,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  
-<title>The Loving Brain
+<title>Seeing the Roses
 <%= " #{@title} " if @title %>
 </title>
 
@@ -31,12 +31,12 @@
 
   <div id="logo">
 
-<span>The </span>
+<span>Seeing </span>
 
 	<!-- wraps link to home page around the image -->
-	<%= link_to_unless_current image_tag("huggingbrain.jpg", :alt => "LovingBrain logo", :title => "Return to Home Page" ), :controller => "welcome" %>
+	<%= link_to_unless_current image_tag("logo.gif", :alt => "Seeing the Roses logo", :title => "Return to Home Page" ), :controller => "welcome" %>
 
-<span> Loving Brain</span>
+<span> the Roses</span>
 
 
   </div>
@@ -60,7 +60,7 @@ Loving ourselves, each other and the world around us
 <div id="footer">
  
  <p>
- <%= link_to "About The Loving Brain", :controller => "explanations", :action => "index" %>
+ <%= link_to "About Seeing the Roses", :controller => "explanations", :action => "index" %>
 	</p>
 </div>
 
