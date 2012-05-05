@@ -29,20 +29,23 @@
 
 <div id="wrapper">
 
-  <div id="logo">
 
+<div id="logo">
 <span>Seeing </span>
-
 	<!-- wraps link to home page around the image -->
 	<%= link_to_unless_current image_tag("logo.gif", :alt => "Seeing the Roses logo", :title => "Return to Home Page" ), :controller => "welcome" %>
-
 <span> the Roses</span>
+</div>
 
-
-  </div>
 <div class="slogan">
 <p>
+<a href="/" class="button-float-left">Home</a>
+<a href="/green" class="button-float-left">Green</a>
+<a href="/explanations" class="button-float-left">About</a>
+<a href="http://blog.seeingtheroses.org" class="button-float-left">Blog</a>
+
 Loving ourselves, each other and the world around us
+
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="SeeingtheRoses">Tweet</a>
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 <a href="http://www.twitter.com/SeeingtheRoses" class="follow-button"><img src="http://twitter-badges.s3.amazonaws.com/t_mini-a.png" alt="Follow SeeingtheRoses on Twitter"/></a>

@@ -1,0 +1,62 @@
+<%= flash_notice  %>
+  
+<h1>Remindful</h1>
+<h2>A free Web application to remind you to appreciate the good things in your life </h2>
+ 
+
+<div style="height:800px">
+
+<div style="float:right; width:430px;">
+
+
+
+<iframe title="YouTube video player" width="425" height="269"  src="http://www.youtube.com/embed/7i1RsDylHGg" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+
+<div style="float:left; width:430px;">
+
+<p style="color:red;font-size:16px">
+This application is in development and under	<%= image_tag("beta.png", :alt => "Beta", :title => "Beta" ) %> testing.
+Please report any bugs or send any suggestions on how to improve the application to seeingtheroses at gmail dot com. 
+</p>
+
+<p>
+Remindful is an easy-to-use database that lets you record the good things in your life. 
+You give the item a title, describe what's good about it, and you also have the opportunity to enter 
+other useful information, like where you got it, how much you may have spent on it, and when it's due for maintenance.
+Remindful sends you an email at an interval you select--it could be daily, weekly, monthly, to remind you about
+one of your things, picked at random.
+The reminder includes the description of what you thought was good about that item, so 
+you can appreciate it again, as if for the first time.
+You can also turn off the email reminders and just use Remindful when you visit this Web site.
+</p>
+
+<p>
+Your "things" need not be limited to things you own. It can be anything in your life you appreciate--a person or place as well as a thing.
+It's up to you. By Seeing the Roses and being mindful of the good things in your life, you'll feel less of the sense of
+dissatisfaction that advertisers use to play on our emotions and buy things we don't really need. 
+</p>
+
+<p>
+You can upload data into Remindful from a spreadsheet (like Excel), and you can download the data you enter into 
+Remindful to your personal computer for backup or even if you decide (sniff) that you don't want to use the program anymore.
+</p>
+
+<p>
+Click on the video on the right to see a demonstration of the program.</p>
+
+
+<% if logged_in? -%>
+<% else -%>
+A Remindful account is free.   
+<%= link_to "Sign up today", signup_path, { :title => "Create an account" } %>
+<% end -%>
+
+ 
+</div> 
+
+</div> <!-- height -->
+
+
