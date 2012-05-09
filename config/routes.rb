@@ -7,7 +7,12 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate', :activation_code => nil
-  map.root :controller => "welcome"
+  map.root :controller => 'pages',
+             :action     => 'show',
+             :id       => 'love-first'
+
+
+
   map.forgot    '/forgot',                    :controller => 'users',     :action => 'forgot'
   map.reset     'reset/:reset_code',          :controller => 'users',     :action => 'reset'
 
