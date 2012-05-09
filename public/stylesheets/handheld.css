@@ -5,7 +5,7 @@
 */
 
 body {
-	width: 320px;     /* special for handheld */
+	width: 100%;     /* special for handheld */
         color: #333;
         background-color: darkgrey;  
         font: 12px Georgia, "Times New Roman", serif; 
@@ -17,6 +17,11 @@ body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6,
 pre, form, fieldset, input, p, blockquote, th, td {
   margin: 0;
   padding: 0;
+}
+
+iframe {
+    max-width: 100%; 
+    overflow:hidden;
 }
 
 img {
