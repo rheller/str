@@ -1,0 +1,294 @@
+
+
+/* =MAIN
+------------------------------------- 
+*/
+
+body {
+	width: 320px;     /* special for handheld */
+        color: #333;
+        background-color: darkgrey;  
+        font: 12px Georgia, "Times New Roman", serif; 
+        font-size:  100%;
+
+}
+
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, 
+pre, form, fieldset, input, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border-width: 0;
+}
+a:link {
+  color: #060;
+}
+a:visited {
+  color: #093;
+}
+a:hover {
+  color: purple;
+
+}
+p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 12px 0;
+}
+h1 {
+  font-size: 24px;
+  line-height: 48px;
+  margin: 12px 0 0 0;
+}
+h2 {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 8px 0 4px 0;
+}
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 12px 0 0 0;
+}
+
+ul {
+list-style-type: circle;
+}
+
+
+
+
+
+
+/* =HEADER
+------------------------------------- */
+#logo {
+  background-color: #00B33C; /* lite olive */
+  text-align: center;
+  height: 30px;
+  font-size: 28px;
+}
+
+#logo img {
+  height: 30px;
+}
+
+#logo span {
+  vertical-align: top;
+}
+
+
+
+.slogan p {
+  font-size: 14px;  
+  text-align : center;
+  font-style:italic;
+  background-color: silver;
+  border: 1px solid;
+}
+
+.climate_deal {
+  background-color: Seashell;
+  font-style:italic;
+  border: 1px solid;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+.climate_deal p{
+  font-size: 11px;  
+}
+
+
+
+
+
+
+#nav {
+  display: block;
+  background-color: #F8F5EE;
+  border-left: 1px solid #DAD1B4;
+  border-right: 1px solid #DAD1B4;
+  border-bottom: 1px solid #ECE6D2;
+}
+#nav ul {
+  float: left;
+  list-style-type: none;
+  margin-left: 5px;
+}
+#nav li {
+  float: left;
+  padding: 6px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+#nav li a {
+  float: left;
+  display: block;
+  padding: 4px 12px;
+  text-decoration: none;
+}
+#nav div {
+  float: right;
+  padding: 10px;
+  margin-right: 5px;
+  text-align: right;
+  font-style: italic;
+  font-size: 13px;
+}
+#nav div a {
+  padding: 3px 0;
+}
+
+
+#nav a:hover {
+  background-color: #fff;
+  text-decoration: none;
+  color: #333;
+}
+
+/* =LAYOUT
+------------------------------------- */
+#wrapper {
+/*  width: 900px;  special for handheld */
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* end layout */
+
+
+
+/* =FOOTER 
+------------------------------------- */
+#footer p {
+  font-size: 10px;  
+  text-align : center;
+  background-color: #F8F5EE;
+  border: 1px solid #DAD1B4;
+  border-top-color: #ECE6D2;
+}
+
+#page_vid {
+  	background-color: gray;
+  	color: white;
+/*	float:right;  */
+	width:318px;        /* handheld - causes video to overflow, making controls accessible */
+	border: 1px solid;
+	font-size: 10px;  
+	text-align: center;
+/*	padding: 5px; */
+}
+
+#page_left {
+/*	float:left; */
+	background-color: Seashell;
+  	border: 1px solid;
+  	margin-bottom: 10px;
+/*  	padding: 10px;  */
+}
+
+.page_left p{
+  font-size: 11px;  
+}
+#page_next_prev  {
+    height: 50px;
+}
+
+#page_headline {
+/*  width: 700px; */
+  margin: 0 auto;
+  text-align: center;
+  font-size: 42px;
+  padding: 10px;
+}
+.page_next  {
+/*  float:right; */
+  display: inline;
+  background-color: Darkorange;
+  padding: 5px;
+  	border: 1px solid;
+}
+
+.page_next a {
+  text-decoration: none;
+}
+
+
+.page_previous  {
+/*  float:left; */
+  display: inline;
+  background-color: Darkorange;
+  padding: 5px;
+  	border: 1px solid;
+}
+.page_previous a {
+  text-decoration: none;
+}
+/* LINKS
+------------------------------------- */
+
+#links_headline {
+  	border: 1px solid;
+        height: 60px;
+        text-align: center; 
+  	background-color: #F8F5EE;
+/*	width: 97%; */
+}
+
+#links_core {
+        padding: 10px;
+  	border: 1px solid;
+/*        float:left;
+        height: 160px;
+        width: 260px;  */
+  background-color: #F8F5EE;
+}
+#links_other {
+        padding: 10px;
+  	border: 1px solid;
+/*        float:left; 
+        height: 160px;
+        width: 260px; */
+  background-color: #F8F5EE;
+}
+#links_deeper {
+        padding: 10px;
+  	border: 1px solid;
+
+/*        float:left; 
+        height: 160px;
+        width: 260px; */
+
+        background-color: #F8F5EE;
+}
+
+
+.button-float-left
+{
+	height: 20px;
+	width: 50px;
+        font-size:  80%;
+        margin-left: 5px;
+        margin-right: 2px;
+        margin-top: 1px;
+        font-style: normal;
+        text-decoration: none;
+        float:left;
+	display: inline;
+  	background-color: #F0F0F0;
+  	border: 1px solid;
+}
+
+.twitter-share-button
+{
+        padding: 2px;
+        float:right;
+}
+.follow-button
+{
+        padding: 4px;
+        float:right;
+}
+
