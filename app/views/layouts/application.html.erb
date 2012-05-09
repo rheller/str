@@ -17,7 +17,7 @@
 <%= javascript_include_tag 'google_analytics' %> 
 
 
-<% if request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(Mobile\/.+Safari)/]  %>
+<% if request.user_agent =~ /Mobile|webOS/   ##if request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(Mobile\/.+Safari)/]  %>
   <%= stylesheet_link_tag "handheld", :media => "only screen and (max-device-width: 480px)" %>
 <% else %>
   <%= stylesheet_link_tag "screen", :media => "screen" %>
