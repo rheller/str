@@ -8,7 +8,7 @@ body {
 /*	width: 100%;      special for handheld */
         color: #333;
         background-color: darkgrey;  
-        font: 12px Georgia, "Times New Roman", serif; 
+        font: 18px Georgia, "Times New Roman", serif; 
         font-size:  100%;
 
 }
@@ -118,24 +118,24 @@ list-style-type: circle;
   border-bottom: 1px solid #ECE6D2;
 }
 #nav ul {
-  float: left;
+/*  float: left; */
   list-style-type: none;
   margin-left: 5px;
 }
 #nav li {
-  float: left;
+/*  float: left; */
   padding: 6px 0;
   font-weight: bold;
   font-size: 14px;
 }
 #nav li a {
-  float: left;
+/*  float: left; */
   display: block;
   padding: 4px 12px;
   text-decoration: none;
 }
 #nav div {
-  float: right;
+/*  float: right; */
   padding: 10px;
   margin-right: 5px;
   text-align: right;
@@ -280,7 +280,7 @@ list-style-type: circle;
         margin-top: 1px;
         font-style: normal;
         text-decoration: none;
-        float:left;
+/*        float:left;*/
 	display: inline;
   	background-color: #F0F0F0;
   	border: 1px solid;
@@ -289,11 +289,11 @@ list-style-type: circle;
 .twitter-share-button
 {
         padding: 2px;
-        float:right;
+/*        float:right; */
 }
 .follow-button
 {
         padding: 4px;
-        float:right;
+/*        float:right; */
 }
 
