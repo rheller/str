@@ -20,8 +20,8 @@ pre, form, fieldset, input, p, blockquote, th, td {
 }
 
 iframe {
-    max-width: 100%; 
-    overflow:hidden;
+/*    max-width: 100%; 
+    overflow:hidden; */
 }
 
 img {
