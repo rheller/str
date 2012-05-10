@@ -20,8 +20,8 @@ pre, form, fieldset, input, p, blockquote, th, td {
 }
 
 iframe {
-/*    max-width: 100%; 
-    overflow:hidden; */
+    max-width: 100%; 
+    overflow:hidden; 
 }
 
 img {
@@ -179,7 +179,7 @@ list-style-type: circle;
   	background-color: gray;
   	color: white;
 /*	float:right;  */
-	width:318px;        /* handheld - causes video to overflow, making controls accessible */
+/*	width:318px; */       /* handheld - causes video to overflow, making controls accessible */
 	border: 1px solid;
 	font-size: 10px;  
 	text-align: center;
@@ -280,7 +280,7 @@ list-style-type: circle;
         margin-top: 1px;
         font-style: normal;
         text-decoration: none;
-/*        float:left;*/
+        float:left;
 	display: inline;
   	background-color: #F0F0F0;
   	border: 1px solid;
@@ -289,11 +289,11 @@ list-style-type: circle;
 .twitter-share-button
 {
         padding: 2px;
-/*        float:right; */
+        float:right; 
 }
 .follow-button
 {
         padding: 4px;
-/*        float:right; */
+        float:right; 
 }
 
