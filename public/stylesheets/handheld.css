@@ -87,11 +87,12 @@ list-style-type: circle;
 
 
 .slogan p {
-  font-size: 14px;  
+  font-size: 20px;  
   text-align : center;
   font-style:italic;
   background-color: silver;
   border: 1px solid;
+  height:60px;
 }
 
 .climate_deal {
@@ -275,7 +276,7 @@ list-style-type: circle;
 {
 	height: 50px;
 	width: 70px;
-        font-size:  80%;
+        font-size: 16px;
         margin-left: 5px;
         margin-right: 2px;
         margin-top: 1px;
