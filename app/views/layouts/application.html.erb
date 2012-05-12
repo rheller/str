@@ -16,10 +16,11 @@
 <%= javascript_include_tag :defaults %>
 <%= javascript_include_tag 'google_analytics' %> 
 
-
+<% if request.user_agent =~ /Mobile|webOS/ %>
   <%= stylesheet_link_tag "handheld", :media => "screen" %>
-
-	
+<% else %>
+  <%= stylesheet_link_tag "screen",   :media => "screen" %>	
+<% end %>
 	
 </head>
 
